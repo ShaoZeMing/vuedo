@@ -34,6 +34,7 @@ class PagesController extends Controller
      * @param \App\Category $category
      */
     public function category(Category $category){
+
         $posts = PostsRepo::getCategoryPosts($category, 10, 'owner');
         return view(config('theme.default.pages').'.category')->withPosts($posts);
     }

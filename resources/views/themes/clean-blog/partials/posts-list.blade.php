@@ -1,13 +1,13 @@
 @if( count($posts) == 0 )
     <div class="post-preview">
         <h2 class="post-title">
-            Whoops, there are no posts here yet :/
+            哎呀, 这儿还没有帖子 :/
         </h2>
     </div>
 @endif
 @foreach($posts as $post)
     <div class="post-preview">
-        <a href="{{route('web.post', $post->slug)}}">
+        <a href="{{route('web.post', $post->hashid)}}">
             <h2 class="post-title">
                 {{ $post->title }}
             </h2>

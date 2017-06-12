@@ -28,7 +28,6 @@ class PostsRepo
      */
     public static function getCategoryPosts($category, $perPage = null, $includes = []){
         $builder = $category->posts()->orderBy('posts.moderated_at', 'DESC')->with($includes);
-
         return self::paginateOrGet($builder, $perPage);;
 
     }

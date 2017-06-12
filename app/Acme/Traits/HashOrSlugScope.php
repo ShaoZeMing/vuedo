@@ -14,7 +14,8 @@ trait HashOrSlugScope
         }
         //find by slug if hashid is invalid
         else {
-            return $query->whereSlug($value);
+            return $query->whereId($value);
+//            return $query->whereSlug($value);
         }
     }
 }

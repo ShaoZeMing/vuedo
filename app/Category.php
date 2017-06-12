@@ -48,7 +48,7 @@ class Category extends Model
     /**
      * MUTATORS
      */
-    public function getHashidAttribute()
+    public function getHashIdAttribute()
     {
         return Hashids::encode($this->id);
     }

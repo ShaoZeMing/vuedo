@@ -31,9 +31,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
+
         parent::boot($router);
 
+        //这儿可以控制请求路由的参数是否存在于某个数据库中
         $router->bind('posts', function ($value) {
+
             return Post::withPostponed()->whereHashOrSlug($value)->firstOrFail();
         });
         $router->bind('categories', function ($value) {

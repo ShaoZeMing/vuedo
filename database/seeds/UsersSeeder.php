@@ -14,8 +14,8 @@ class UsersSeeder extends Seeder
         DB::table('users')->truncate();
 
         factory(App\User::class, 2)->create();
-        $admin = factory(App\User::class, 'admin')->create(['email' => 'first@admin.com']);
+        $admin = factory(App\User::class, 'admin')->create(['email' => 'szm19920426@gmail.com','password' => bcrypt('123123')]);
 
-        $this->command->info("New Admin created. Username: $admin->email,  Password: 123pass");
+        $this->command->info("New Admin created. Username: $admin->email,  Password: 123123");
     }
 }

@@ -80,6 +80,7 @@ class User extends Authenticatable
 
     //Mutators
     public function getAvatarAttribute(){
-        return 'https://www.gravatar.com/avatar/'. md5($this->email);
+//        return 'https://www.gravatar.com/avatar/'. md5($this->email);
+        return 'http://vuedo.ming.com/img/posts/15/12.jpg';
     }
 }
